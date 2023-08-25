@@ -1,5 +1,5 @@
 {
-  "name": "ani-motion",
+  "name": "re-ani-motion",
   "version": "0.1.0",
   "description": "A simple animation wrapper for making animation easier. So let's ani-motion",
   "main": "dist/index.js",
@@ -17,6 +17,7 @@
     "react motion",
     "framer motion",
     "ani motion",
+    "re ani motion",
     "animation"
   ],
   "license": "MIT",

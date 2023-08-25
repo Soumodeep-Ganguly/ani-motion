@@ -1,10 +1,10 @@
-# Ani-Motion
+# Re-Ani-Motion
 
-AniMotion is a flexible and customizable animation wrapper component for React. It allows you to easily add various types of animations to your React components, making your UI more engaging and dynamic. AniMotion provides a range of animation options and settings that you can configure to create eye-catching animations without the need for complex CSS or external animation libraries. It provides various animation types and customizable animation settings.
+ReAniMotion is a flexible and customizable animation wrapper component for React. It allows you to easily add various types of animations to your React components, making your UI more engaging and dynamic. AniMotion provides a range of animation options and settings that you can configure to create eye-catching animations without the need for complex CSS or external animation libraries. It provides various animation types and customizable animation settings.
 
 ## Usage
 ```jsx
-import { MouseOverMotion, EntryMotion } from 'ani-motion';
+import { MouseOverMotion, EntryMotion } from 're-ani-motion';
 
 <MouseOverMotion
   animationType="border"
