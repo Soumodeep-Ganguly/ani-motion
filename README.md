@@ -47,40 +47,90 @@ The EntryMotion component is a React component that enables smooth animations wh
   
 - **background:** Changes background color.
 
-  | Setting         | Description                            | Default Value |
-  |-----------------|----------------------------------------|---------------|
-  | `backgroundColor`| Background color during animation     | N/A           |
-  | `duration`      | Animation duration in seconds         | 1             |
-  | `delay`         | Animation delay in seconds            | 0             |
+  | Setting          | Description                            | Default Value |
+  |------------------|----------------------------------------|---------------|
+  | `backgroundColor`| Background color during animation      | N/A           |
+  | `duration`       | Animation duration in seconds          | 1             |
+  | `delay`          | Animation delay in seconds             | 0             |
   
 - **scale:** Applies a scaling effect.
 
   | Setting         | Description                            | Default Value |
   |-----------------|----------------------------------------|---------------|
-  | `scaleFactor`   | Scaling factor during animation       | N/A           |
-  | `duration`      | Animation duration in seconds         | 1             |
-  | `delay`         | Animation delay in seconds            | 0             |
+  | `scaleFactor`   | Scaling factor during animation        | 1.2           |
+  | `duration`      | Animation duration in seconds          | 1             |
+  | `delay`         | Animation delay in seconds             | 0             |
 
 - **rotate:** Applies a rotation effect.
 
   | Setting         | Description                            | Default Value |
   |-----------------|----------------------------------------|---------------|
-  | `degrees`       | Degrees of rotation during animation | N/A           |
-  | `duration`      | Animation duration in seconds         | 1             |
-  | `delay`         | Animation delay in seconds            | 0             |
+  | `degrees`       | Degrees of rotation during animation   | N/A           |
+  | `duration`      | Animation duration in seconds          | 1             |
+  | `delay`         | Animation delay in seconds             | 0             |
 
 - **fade:** Changes opacity (fade effect).
 
   | Setting         | Description                            | Default Value |
   |-----------------|----------------------------------------|---------------|
-  | `fadeValue`     | Opacity value during animation        | N/A           |
-  | `duration`      | Animation duration in seconds         | 1             |
-  | `delay`         | Animation delay in seconds            | 0             |
+  | `fadeValue`     | Opacity value during animation         | N/A           |
+  | `duration`      | Animation duration in seconds          | 1             |
+  | `delay`         | Animation delay in seconds             | 0             |
 
-- **colorChange:** Changes background color.
+- **colorChange:** Changes text color.
 
   | Setting         | Description                            | Default Value |
   |-----------------|----------------------------------------|---------------|
-  | `targetColor`   | Target background color during animation | N/A         |
-  | `duration`      | Animation duration in seconds         | 1             |
-  | `delay`         | Animation delay in seconds            | 0 
+  | `targetColor`   | Target text color during animation     | `#000`        |
+  | `duration`      | Animation duration in seconds          | 1             |
+  | `delay`         | Animation delay in seconds             | 0 
+
+- **slideUp:** Slides the children up.
+
+  | Setting         | Description                            | Default Value |
+  |-----------------|----------------------------------------|---------------|
+  | `duration`      | Animation duration in seconds          | 1             |
+  | `delay`         | Animation delay in seconds             | 0 
+
+- **slideDown:** Slides the children down.
+
+  | Setting         | Description                            | Default Value |
+  |-----------------|----------------------------------------|---------------|
+  | `duration`      | Animation duration in seconds          | 1             |
+  | `delay`         | Animation delay in seconds             | 0 
+
+- **slideLeft:** Slides the children left.
+
+  | Setting         | Description                            | Default Value |
+  |-----------------|----------------------------------------|---------------|
+  | `duration`      | Animation duration in seconds          | 1             |
+  | `delay`         | Animation delay in seconds             | 0 
+
+- **slideRight:** Slides the children right.
+
+  | Setting         | Description                            | Default Value |
+  |-----------------|----------------------------------------|---------------|
+  | `duration`      | Animation duration in seconds          | 1             |
+  | `delay`         | Animation delay in seconds             | 0 
+
+- **zoomIn:** Zoom in the children.
+
+  | Setting         | Description                            | Default Value |
+  |-----------------|----------------------------------------|---------------|
+  | `duration`      | Animation duration in seconds          | 1             |
+  | `delay`         | Animation delay in seconds             | 0 
+
+- **zoomOut:** Zoom out the children.
+
+  | Setting         | Description                            | Default Value |
+  |-----------------|----------------------------------------|---------------|
+  | `duration`      | Animation duration in seconds          | 1             |
+  | `delay`         | Animation delay in seconds             | 0 
+
+- **bounce:** Applies bounce effect.
+
+  | Setting         | Description                            | Default Value |
+  |-----------------|----------------------------------------|---------------|
+  | `bounceCount`   | Number of times it should bounce       | 1             |
+  | `duration`      | Animation duration in seconds          | 1             |
+  | `delay`         | Animation delay in seconds             | 0             |
