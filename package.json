@@ -1,6 +1,6 @@
 {
   "name": "re-ani-motion",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple animation wrapper for making animation easier. So let's ani-motion",
   "main": "dist/index.js",
   "scripts": {
@@ -18,7 +18,9 @@
     "framer motion",
     "ani motion",
     "re ani motion",
-    "animation"
+    "animation",
+    "spinner",
+    "spin loader"
   ],
   "license": "MIT",
   "repository": {
