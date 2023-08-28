@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import animationTypes from './utils/animationTypes';
+import keyframes from './utils/keyframes';
 
 export default function EntryMotion(props) {
     const [isAnimating, setIsAnimating] = useState(false);
@@ -12,17 +14,11 @@ export default function EntryMotion(props) {
         opacity: 1,
     };
 
-    const animationTypes = {
-        border: (settings) => animationListBorder(settings),
-        background: (settings) => animationListBackground(settings),
-        scale: (settings) => animationListScale(settings),
-        rotate: (settings) => animationListRotate(settings),
-        fade: (settings) => animationListFade(settings),
-        colorChange: (settings) => animationListColorChange(settings),
-        // Add more animation types here
-    };
-
     const getAnimationStyles = () => {
+        if (!isAnimating) {
+            return {}; // No animation styles if not animating
+        }
+
         const animationType = props.animationType || 'border';
         const animationSettings = { ...defaultAnimationSettings, ...props.animationSettings };
         const animationFunction = animationTypes[animationType];
@@ -42,36 +38,6 @@ export default function EntryMotion(props) {
         };
     };
 
-    const animationListBorder = ({ borderColor, borderWidth, duration, delay }) => ({
-        transition: `border ${duration}s ease-in-out ${delay}s`,
-        border: isAnimating ? `${borderWidth}px solid ${borderColor}` : 'none',
-    });
-
-    const animationListBackground = ({ backgroundColor, duration, delay }) => ({
-        transition: `background-color ${duration}s ease-in-out ${delay}s`,
-        backgroundColor: isAnimating ? backgroundColor : 'transparent',
-    });
-
-    const animationListScale = ({ scaleFactor, duration, delay }) => ({
-        transition: `transform ${duration}s ease-in-out ${delay}s`,
-        transform: isAnimating ? `scale(${scaleFactor})` : 'none',
-    });
-
-    const animationListRotate = ({ degrees, duration, delay }) => ({
-        transition: `transform ${duration}s ease-in-out ${delay}s`,
-        transform: isAnimating ? `rotate(${degrees}deg)` : 'none',
-    });
-    
-    const animationListFade = ({ fadeValue, duration, delay }) => ({
-        transition: `opacity ${duration}s ease-in-out ${delay}s`,
-        opacity: isAnimating ? fadeValue : 1,
-    });
-    
-    const animationListColorChange = ({ targetColor, duration, delay }) => ({
-        transition: `background-color ${duration}s ease-in-out ${delay}s`,
-        backgroundColor: isAnimating ? targetColor : 'transparent',
-    });
-
     useEffect(() => {
         if (!isAnimating) {
             const animationDelay = props.animationSettings?.delay || defaultAnimationSettings.delay;
@@ -87,6 +53,7 @@ export default function EntryMotion(props) {
             style={{ ...getAnimationStyles(), ...props.style }}
         >
             {props.children}
+            {keyframes(props.animationType)}
         </div>
     );
 }
